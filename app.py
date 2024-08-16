@@ -62,7 +62,7 @@ class ChatBot():
         )
 
 # Create an instance of the ChatBot class
-ot = ChatBot()
+bot = ChatBot()
 # input = input("Ask me anything: ")
 # result = bot.rag_chain.invoke(input)
 # print(result)
