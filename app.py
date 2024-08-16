@@ -62,7 +62,7 @@ class ChatBot():
         )
 
 # Create an instance of the ChatBot class
-bot = ChatBot()
+ot = ChatBot()
 # input = input("Ask me anything: ")
 # result = bot.rag_chain.invoke(input)
 # print(result)
@@ -100,4 +100,3 @@ if st.session_state.messages[-1]["role"] != "assistant":
             st.write(response)
     message = {"role": "assistant", "content": response}
     st.session_state.messages.append(message)
-
