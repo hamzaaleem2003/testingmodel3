@@ -23,8 +23,8 @@ class ChatBot():
         embeddings = HuggingFaceEmbeddings()
         
         # Define the collection name and persistent directory for Chroma
-        collection_name = "urdu_book_collection"
-        persist_directory = "urdubookcollection"  # Specify the persistent directory
+        collection_name = "hatechscollection"
+        persist_directory = "hatechscollection"  # Specify the persistent directory
 
         # Initialize Chroma by loading the existing collection
         self.knowledge = Chroma(
@@ -38,7 +38,7 @@ class ChatBot():
         
         # Define the template for prompting
         self.template = """
-        this is the data from the book "Jami-Khalq-par-Huzoor-ki-Rahmat-o-Shafqat" written by huzoor sheikh ul islam dr muhammad tahir ul qadri, whatever question is asked you have to answer that properly and comprehensively. Whatever question is asked you have to answer properly and comprehensively also, whenever a question is asked from this book you always have to answer the question in Urdu language no matter if in prompt it mentions to answer in Urdu or not, but if it specifies to answer in some other language, only then you have to change the language in giving a response.
+        this is the data from my website i design to run my business and name of my company is "hatechs" , whatever question is asked you have to answer that properly and comprehensively and in detail, whenever a question is asked from this book you always have to answer the question in English language no matter if in prompt it mentions to answer in English or not, but if it specifies to answer in some other language, only then you have to change the language in giving a response.
 
         Context: {context}
 
@@ -63,9 +63,9 @@ class ChatBot():
 
 # Create an instance of the ChatBot class
 bot = ChatBot()
-st.set_page_config(page_title="Urdu Book Bot")
+st.set_page_config(page_title="My Website Bot")
 with st.sidebar:
-    st.title('Urdu Book Bot')
+    st.title('My Website Bot')
 
 # Function for generating LLM response incrementally
 def generate_response_stream(input):
@@ -77,7 +77,7 @@ def generate_response_stream(input):
 
 # Store LLM generated responses
 if "messages" not in st.session_state.keys():
-    st.session_state.messages = [{"role": "assistant", "content": "Welcome, ask me anything from this book"}]
+    st.session_state.messages = [{"role": "assistant", "content": "Welcome, ask me anything about HATECHS"}]
 
 # Display chat messages
 for message in st.session_state.messages:
