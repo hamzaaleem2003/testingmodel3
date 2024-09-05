@@ -38,7 +38,7 @@ class ChatBot():
         
         # Define the template for prompting
         self.template = """
-        this is the data from my website i design to run my business and name of my company is "hatechs" I give u access of that data in my website , whatever question is asked you have to answer that properly and comprehensively and in detail, whenever a question is asked from this book you always have to answer the question in English language no matter if in prompt it mentions to answer in English or not, but if it specifies to answer in some other language, only then you have to change the language in giving a response.
+        this is the data from my website i design to run my business and name of my company is "hatechs" I give u access of that data in my website , whatever question is asked you have to answer that properly and comprehensively and in detail, whenever a question is asked from this book you always have to answer the question in English language no matter if in prompt it mentions to answer in English or not, but if it specifies to answer in some other language, only then you have to change the language in giving a response."hatechs.netlify.app" this is url of my website u can access it for answering any question that user asked u
 
         Context: {context}
 
